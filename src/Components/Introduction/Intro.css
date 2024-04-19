@@ -1,0 +1,45 @@
+.intro {
+    display: flex;
+    height: 77vh;
+  }
+  .headerContainer{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .i-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .i-name > :nth-child(1) {
+    font-size: 2.1rem;
+    margin-left: 100px;
+    margin-top: 50px;
+    color: #20A0D8;
+    font-weight: bold;
+   
+    
+  }
+  .i-name > :nth-child(2) {
+    color:#FFFFFF;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fadeInAnimation {
+    animation: fadeIn 1s ease-in-out;
+  }
+  

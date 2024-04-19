@@ -1,0 +1,44 @@
+.testimonial{
+    display: flex;
+    height: 75vh;
+    background: rgb(5, 55, 78);
+    background: linear-gradient(90deg, rgb(4, 48, 68) 0%, rgba(128,208,244,1) 71%);    
+    margin-top: 40px;
+  }
+  .t-left{
+    position: relative;
+  }
+  .t-left img{
+    width: 450px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute; 
+    left: 5%; 
+    top: 5%; 
+  }
+  .t-right{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 50%;
+  }
+  .text-style{
+     display: flex;
+     flex-direction: column;
+     gap: 0.25rem;
+     margin-top: 50px;
+  }
+
+ .text-style:nth-child(1) {
+    color: #20A0D8;
+    font-weight: bold;
+    font-size: 2rem;
+ }
+ .text-style2{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: -20px;
+ }
