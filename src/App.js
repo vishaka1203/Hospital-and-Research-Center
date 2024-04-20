@@ -13,7 +13,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/specialities" component={Specialities} />
+          <Route path="/Home" />
+          <Route path="/Specialities" component={Specialities} />
         </Routes>
         <Intro />
         <Carousel />

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../Assets/logo.png';
+import { Link } from 'react-router-dom';
+import Specialities from './../../Pages/Specialities/Specialities';
+import OPDschedule from '../../Pages/OPD Schedule/OPDschedule';
 
 const Navbar = () => {
-  const [menu, setMenu] = useState('hospital');
   return (
     <div className="header">
       <div class="topbar">
@@ -55,16 +57,16 @@ const Navbar = () => {
                 <div class="main-menu">
                   <nav class="navigation">
                     <ul class="nav menu">
-                      <li class="active">
-                        <a href="#">
-                          Home <i class="icofont-rounded-down"></i>
-                        </a>
+                      <li className="active">
+                        <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <a href="/Specialities">Specialities</a>
+                        <Link to="/Specialities">Specialities</Link>
+                        {Specialities}
                       </li>
                       <li>
-                        <a href="#"> OPD Schedule </a>
+                        <Link to="/OPDSchedule"> OPD Schedule </Link>{' '}
+                        {OPDschedule}
                       </li>
                       <li>
                         <a href="#">
