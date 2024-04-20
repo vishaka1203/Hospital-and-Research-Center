@@ -12,14 +12,15 @@ function App() {
     <div>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/Home" />
-          <Route path="/Specialities" component={Specialities} />
-        </Routes>
         <Intro />
         <Carousel />
         <Testimonial />
         <Footer />
+        <Routes>
+          <Route exact path="/" element={''} />
+
+          <Route path="/Specialities" element={<Specialities />} />
+        </Routes>
       </Router>
     </div>
   );

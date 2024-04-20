@@ -9,12 +9,12 @@ import OPDschedule from '../../Pages/OPD Schedule/OPDschedule';
 const Navbar = () => {
   return (
     <div className="header">
-      <div class="topbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-5 col-12">
+      <div className="topbar">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-5 col-12">
               {/* <!-- Contact --> */}
-              <ul class="top-link">
+              <ul className="top-link">
                 <li>
                   <img src={logo} alt="" />
                 </li>
@@ -27,14 +27,14 @@ const Navbar = () => {
               </ul>
               {/* <!-- End Contact --> */}
             </div>
-            <div class="col-lg-6 col-md-7 col-12">
+            <div className="col-lg-6 col-md-7 col-12">
               {/* <!-- Top Contact --> */}
-              <ul class="top-contact">
+              <ul className="top-contact">
                 <li>
-                  <i class="fa fa-phone"></i>+91-832-2489333/2489190
+                  <i className="fa fa-phone"></i>+91-832-2489333/2489190
                 </li>
                 <li>
-                  <i class="fa fa-envelope"></i>
+                  <i className="fa fa-envelope"></i>
                   <a href="mailto:support@yourmail.com">
                     drdukleshospital@gmail.com
                   </a>
@@ -48,31 +48,29 @@ const Navbar = () => {
       {/* <!-- End Top Bar --> */}
 
       {/* <!-- Header Inner --> */}
-      <div class="header-inner">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class=" col-md-10 col-12">
+      <div className="header-inner">
+        <div className="container">
+          <div className="inner">
+            <div className="row">
+              <div className=" col-md-10 col-12">
                 {/* <!-- Main Menu --> */}
-                <div class="main-menu">
-                  <nav class="navigation">
-                    <ul class="nav menu">
+                <div className="main-menu">
+                  <nav className="navigation">
+                    <ul className="nav menu">
                       <li className="active">
                         <Link to="/">Home</Link>
                       </li>
                       <li>
                         <Link to="/Specialities">Specialities</Link>
-                        {Specialities}
                       </li>
                       <li>
-                        <Link to="/OPDSchedule"> OPD Schedule </Link>{' '}
-                        {OPDschedule}
+                        <Link to="/OPDSchedule"> OPD Schedule </Link>
                       </li>
                       <li>
                         <a href="#">
-                          Services<i class="icofont-rounded-down"></i>
+                          Services<i className="icofont-rounded-down"></i>
                         </a>
-                        <ul class="dropdown">
+                        <ul className="dropdown">
                           <li>
                             <a href="404.html">Well Woman Clinic</a>
                           </li>
@@ -93,7 +91,7 @@ const Navbar = () => {
                       <li>
                         <a href="#">
                           International Patients
-                          <i class="icofont-rounded-down"></i>
+                          <i className="icofont-rounded-down"></i>
                         </a>
                       </li>
                       <li>
@@ -107,9 +105,9 @@ const Navbar = () => {
                 </div>
                 {/* <!--/ End Main Menu --> */}
               </div>
-              <div class="col-lg-2 col-12">
-                <div class="get-quote">
-                  <a href="appointment.html" class="btn">
+              <div className="col-lg-2 col-12">
+                <div className="get-quote">
+                  <a href="appointment.html" className="btn">
                     Contact Us
                   </a>
                 </div>
