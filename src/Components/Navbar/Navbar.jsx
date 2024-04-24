@@ -3,8 +3,6 @@ import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../Assets/logo.png';
 import { Link } from 'react-router-dom';
-import Specialities from './../../Pages/Specialities/Specialities';
-import OPDschedule from '../../Pages/OPD Schedule/OPDschedule';
 
 const Navbar = () => {
   return (
@@ -72,33 +70,42 @@ const Navbar = () => {
                         </a>
                         <ul className="dropdown">
                           <li>
-                            <a href="404.html">Well Woman Clinic</a>
+                            <Link to="/Services/WellWomenClinic">
+                              Well Woman Clinic
+                            </Link>
                           </li>
                           <li>
-                            <a href="404.html">Patho Lab</a>
+                            <Link to="/Services/WellWomenClinic/PathoLab">
+                              Patho Lab
+                            </Link>
                           </li>
                           <li>
-                            <a href="404.html">Health Checks</a>
+                            <Link to="/Services/WellWomenClinic/PathoLab/HealthChecks">
+                              Health Checks
+                            </Link>
                           </li>
                           <li>
-                            <a href="404.html">Diagnostics</a>
+                            <Link to="/Services/WellWomenClinic/PathoLab/HealthChecks/Diagnostics">
+                              Diagnostics
+                            </Link>
                           </li>
                           <li>
-                            <a href="404.html">Pharmacy</a>
+                            <Link to="/Services/WellWomenClinic/PathoLab/HealthChecks/Diagnostics/Pharmacy">
+                              Pharmacy
+                            </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">
-                          International Patients
-                          <i className="icofont-rounded-down"></i>
-                        </a>
+                        <Link to="/IntPatients"> International Patients</Link>
                       </li>
                       <li>
-                        <a href="contact.html">Academics & Research</a>
+                        <Link to="/AcademicsResearch">
+                          Academics & Research
+                        </Link>
                       </li>
                       <li>
-                        <a href="contact.html">Gallery</a>
+                        <Link to="/Gallery">Gallery</Link>
                       </li>
                     </ul>
                   </nav>
@@ -107,9 +114,12 @@ const Navbar = () => {
               </div>
               <div className="col-lg-2 col-12">
                 <div className="get-quote">
-                  <a href="appointment.html" className="btn">
+                  <Link to="/Contact" className="btn">
+                    Contact
+                  </Link>
+                  {/* <a href="appointment.html" className="btn">
                     Contact Us
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

@@ -4,51 +4,150 @@ import './Footer.css'; // Import the CSS file for styling
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      {/* About  Box */}
-      <div className="footer-box">
-        <div className="footer-about">
-          <span className="about-style">ABOUT US</span>
-          <div className="about-us">
-            <span>
-              Dr Dugle's Hospital & Research Center: Committed to pioneering
-              medical breakthoughs, providing compassionate care, and enhancing
-              lives though innovative and exellence in healthcare.
-            </span>
-          </div>
-        </div>
-      </div>
+    <footer id="footer" className="footer">
+      {/* Footer Top */}
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="single-footer">
+                <h2>About Us</h2>
+                <p>
+                  Dr. Dukle's Hospital and Research Center: Delivering
+                  cutting-edge medical care and pioneering research, ensuring a
+                  healthier tomorrow.
+                </p>
+                {/* Social */}
+                <ul className="social">
+                  <li>
+                    <a href="#">
+                      <i className="icofont-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="icofont-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="icofont-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="icofont-vimeo"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="icofont-pinterest"></i>
+                    </a>
+                  </li>
+                </ul>
+                {/* End Social */}
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="single-footer f-link">
+                <h2>Quick Links</h2>
+                <div className="row">
+                  <div className="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Home
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          About Us
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Services
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Consuling
+                        </a>
+                      </li>
 
-      {/* Left Box */}
-      <div className="footer-box">
-        <div className="footer-left">
-          <span className="contact-style">GET IN TOUCH</span>
-          <div className="contact-info">
-            <FaPhone /> +91-832-2489333/2489190
-          </div>
-          <div className="contact-info">
-            <FaEnvelope /> drdukleshospital@gmail.com
-          </div>
-          <div className="contact-info">
-            <FaMapMarker /> Fort Aguada Road Candolim, North Goa 403515
-          </div>
-        </div>
-      </div>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Testimonials
+                        </a>
+                      </li>
 
-      {/* Right Box */}
-      <div className="footer-box">
-        <div className="footer-right">
-          <div className="footer-r-heading">
-            <span>QUICK LINKS</span>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="single-footer">
+                <h2>Open Hours</h2>
+                <p>
+                  We're open on Monday to Saturday, 8:00 AM - 8:00 PM. Schedule
+                  appointments for personalized care and expert medical
+                  services. Your health is our priority.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="single-footer">
+                <h2>Contact Us</h2>
+                <p>For inquiries, contact us at:</p>
+                <div className="contact-info">
+                  <p>
+                    <strong>Email:</strong> drdukleshospital@gmail.com
+                  </p>
+                  <p>
+                    <strong>Phone:</strong> +91-832-2489333/2489190
+                  </p>
+                  <p>
+                    <strong>Address:</strong> Fort Aguada Road Candolim, North
+                    Goa 403515
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <button className="contact-btn">Contact Us</button>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
         </div>
       </div>
     </footer>

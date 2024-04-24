@@ -72,7 +72,7 @@ const Carousel = () => {
     ],
   };
   return (
-    <div className="container">
+    <div style={{ height: '77vh' }} className="container">
       <div className="c-name">
         <span
           className="header-style"
