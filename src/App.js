@@ -3,10 +3,9 @@ import Footer from './Components/Footer/Footer';
 import Intro from './Components/Introduction/Intro';
 import Navbar from './Components/Navbar/Navbar';
 import Carousel from './Components/Slider/Carousel';
-import Testimonial from './Components/Testimonial/Testimonial';
+import Feature from './Components/Feature/Feature';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Specialities from './Pages/Specialities/Specialities';
-import { Fragment } from 'react';
 import OPDschedule from './Pages/OPDSchedule/OPDschedule';
 import WellWomenClinic from './Pages/Services/WellWomenClinic/WellWomenClinic';
 import PathoLab from './Pages/Services/PathoLab/PathoLab';
@@ -17,6 +16,7 @@ import IntPatients from './Pages/IntPatients/IntPatients';
 import AcademicsResearch from './Pages/AcademicsResearch/AcademicsResearch';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
+import Testimonial from './Components/Testimonial/Testimonial';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
               <>
                 <Intro />
                 <Carousel />
+                <Feature />
                 <Testimonial />
               </>
             }

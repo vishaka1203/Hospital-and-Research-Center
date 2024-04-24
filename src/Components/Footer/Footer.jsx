@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarker, FaFacebook } from 'react-icons/fa';
+
 import './Footer.css'; // Import the CSS file for styling
 
 const Footer = () => {
@@ -60,7 +60,16 @@ const Footer = () => {
                             className="fa fa-caret-right"
                             aria-hidden="true"
                           ></i>
-                          Home
+                          OPD Schedule
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i
+                            className="fa fa-caret-right"
+                            aria-hidden="true"
+                          ></i>
+                          Contact Us
                         </a>
                       </li>
                       <li>
@@ -72,48 +81,6 @@ const Footer = () => {
                           About Us
                         </a>
                       </li>
-                      <li>
-                        <a href="#">
-                          <i
-                            className="fa fa-caret-right"
-                            aria-hidden="true"
-                          ></i>
-                          Services
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-6 col-md-6 col-12">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i
-                            className="fa fa-caret-right"
-                            aria-hidden="true"
-                          ></i>
-                          Consuling
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#">
-                          <i
-                            className="fa fa-caret-right"
-                            aria-hidden="true"
-                          ></i>
-                          Testimonials
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#">
-                          <i
-                            className="fa fa-caret-right"
-                            aria-hidden="true"
-                          ></i>
-                          Contact Us
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -123,9 +90,13 @@ const Footer = () => {
               <div className="single-footer">
                 <h2>Open Hours</h2>
                 <p>
-                  We're open on Monday to Saturday, 8:00 AM - 8:00 PM. Schedule
-                  appointments for personalized care and expert medical
-                  services. Your health is our priority.
+                  <strong>
+                    Monday-Saturday <br />
+                  </strong>
+                  8:00 AM - 8:00 PM.
+                  <br />
+                  <br />
+                  Schedule appointments for personalized care
                 </p>
               </div>
             </div>
