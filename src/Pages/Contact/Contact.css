@@ -1,102 +1,41 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.body {
-  font: 400 16px Montserrat, sans-serif;
-  color: #444;
-  padding: 0;
-  margin: 0;
-  background-color: #f8f8f8;
-}
-
-.contact {
+.contact-form {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  align-items: center;
+  height: 100vh;
 }
 
-.card {
-  width: 700px;
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 10px rgba(18, 34, 68, 0.06);
-  overflow: hidden;
+.c-left {
+  flex: 1;
 }
 
-.waves {
-  height: 80px;
-  background: linear-gradient(to bottom left, #e14, #e72);
+.c-right {
+  flex: 1;
 }
 
-h1 {
-  margin: 2rem 2rem 0;
-  font-size: 1.62rem;
+.skills {
+  text-align: center;
 }
 
-.form {
-  padding: 2rem;
+.user {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .button {
-  display: block;
   width: 100%;
-  background-color: #1A76D1;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 3px;
-  padding: 1ch;
-  font-size: 1rem;
-  color: #fff;
-  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.text-input,
-.text-area {
-  position: relative;
-  margin-bottom: 1rem;
+.button:hover {
+  background-color: #0056b3;
 }
 
-.text-input label,
-.text-area label {
-  position: absolute;
-  top: 1ch;
-  left: 1ch;
-  padding: 0 0.5ch;
-  pointer-events: none;
-  transition: 150ms ease;
-  color: #888;
-}
-
-.text-input label.label-focus,
-.text-area label.label-focus {
-  position: absolute;
-  top: 0;
-  font-size: 0.9em;
-  color: #1A76D1;
-  font-weight: bold;
-  transform: translateY(-50%);
-  background-color: #fff;
-  font-weight: 600;
-}
-
-.text-input input,
-.text-area textarea {
-  display: block;
-  width: 100%;
-  border: 2px solid #eee;
-  padding: 1ch;
-  border-radius: 3px;
-  transition: 150ms ease;
-  outline: none;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.text-input input.input-focus,
-.text-area textarea.input-focus {
-    color: #1A76D1;
-}
