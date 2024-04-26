@@ -52,7 +52,7 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail}>
         <h2 className="heading">Contact Us</h2>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
