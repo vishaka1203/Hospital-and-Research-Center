@@ -12,14 +12,16 @@
   background-color: #f8f8f8;
 }
 
-/* .container {
+.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 .card {
-  width: 600px;
+  width: 700px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 2px 10px rgba(18, 34, 68, 0.06);

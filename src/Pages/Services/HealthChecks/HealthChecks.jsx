@@ -21,11 +21,11 @@ const HealthChecks = () => {
             </p>
             <h1 className="heading1">Health Checks</h1>
             <p style={{ textAlign: 'left' }}>
-              Prevention is better than cure. Many diseases such as diabetes,
-              hypertension, heart disease and cancer have no specific signs or
-              symptoms early in their course. A preventive health check can help
-              you assess your current health status and detect early warning
-              signs of disease and its complications. <br />
+              <br /> Prevention is better than cure. Many diseases such as
+              diabetes, hypertension, heart disease and cancer have no specific
+              signs or symptoms early in their course. A preventive health check
+              can help you assess your current health status and detect early
+              warning signs of disease and its complications. <br />
               <br />
               This also serves as a baseline medical record for any future
               reference. You can choose from our customized plans or consult
@@ -41,12 +41,12 @@ const HealthChecks = () => {
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-heartbeat text-primary fs-4"></i>
+                  <i className="fa fa-stethoscope text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Basic Health Check</h4>
@@ -54,41 +54,39 @@ const HealthChecks = () => {
                   Comprehensive basic health checkup covering key aspects of
                   wellness and prevention.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-heartbeat text-primary fs-4"></i>
+                  <i className="fa fa-file-prescription text-primary fs-4"></i>
                 </div>
                 <h4 className="mb-3">Pre Employment Health Check</h4>
                 <p className="mb-4">
                   Pre-employment health assessment for applicants.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-brain text-primary fs-4"></i>
+                  <i className="fa fa-heart text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Hypertension Health Check</h4>
@@ -96,42 +94,40 @@ const HealthChecks = () => {
                   Specialized checkup for hypertension management and preventive
                   care measures.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-syringe text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Diabetes Health Check </h4>
                 <p className="mb-4">
                   Specialized diabetes screenings for optimal health management.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-male text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Senior Citizen Health Check</h4>
@@ -139,21 +135,20 @@ const HealthChecks = () => {
                   Comprehensive health assessments tailored for senior citizens'
                   well-being.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Well Woman Health Check</h4>
@@ -161,21 +156,20 @@ const HealthChecks = () => {
                   Comprehensive health evaluations designed specifically for
                   women's overall well-being.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-file-medical text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Master Health Check</h4>
@@ -184,7 +178,7 @@ const HealthChecks = () => {
                   comprehensive well-being.
                 </p>
                 <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
+                  <i className="fa fa-minus text-primary me-3"></i>Read More
                 </a>
               </div>
             </div>

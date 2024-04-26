@@ -1,6 +1,7 @@
-@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
+@import url(https://icofont.com/);
 
 .footer{
 	position:relative;
@@ -26,13 +27,16 @@
 }
 .footer .single-footer .social{
 	margin-top:25px;
+	
 }
 .footer .single-footer .social li{
 	display:inline-block;
 	margin-right:10px;
+	
 }
 .footer .single-footer .social li:last-child{
 	margin-right:0px;
+	
 }
 .footer .single-footer .social li a {
 	height: 34px;

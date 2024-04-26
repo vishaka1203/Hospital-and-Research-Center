@@ -16,7 +16,14 @@ const IntPatients = () => {
             className="text-center mx-auto mb-5 wow fadeInUp"
             data-wow-delay="0.1s"
           >
-            <p className="d-inline-block border rounded-pill py-1 px-4">
+            <p
+              style={{
+                fontSize: '2rem',
+                background:
+                  'linear-gradient(90deg, rgba(242,244,245,1) 0%, rgba(241,241,241,1) 75%)',
+              }}
+              className="d-inline-block border rounded-pill py-1 px-4"
+            >
               International Patients
             </p>
             <h3 className="h3">

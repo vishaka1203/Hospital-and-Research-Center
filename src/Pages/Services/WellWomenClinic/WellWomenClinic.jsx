@@ -1,6 +1,9 @@
 import React from 'react';
 import './WellWomenClinic.css';
 import wellwomenclinic from '../WellWomenClinic/wellwomenclinic.jpg';
+import wwc1 from '../WellWomenClinic/wellwoman1.jpeg';
+import ww2 from '../WellWomenClinic/wellwoman3.jpg';
+import ww3 from '../WellWomenClinic/wellwoman4.jpg';
 
 const WellWomenClinic = () => {
   return (
@@ -11,12 +14,7 @@ const WellWomenClinic = () => {
           backgroundImage: ` url(${wellwomenclinic})`,
         }}
       ></div>
-      <div
-        className="container-xxl py-5"
-        // style={{
-        //   backgroundImage: `linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${wellwomenclinic},)`,
-        // }}
-      >
+      <div className="container-xxl py-5">
         <div className="container">
           <div
             className="text-center mx-auto mb-5 wow fadeInUp"
@@ -32,6 +30,7 @@ const WellWomenClinic = () => {
                 fontFamily: 'poppins',
               }}
             >
+              <br />
               Women at all stages of life, from early teens to menopause and
               beyond will experience a variety of hormonal, medical, physical
               and emotional conditions that require attention and care. <br />
@@ -80,12 +79,12 @@ const WellWomenClinic = () => {
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-heartbeat text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Maternity & Delivery</h4>
@@ -93,42 +92,40 @@ const WellWomenClinic = () => {
                   Exceptional care for mothers and newborns, ensuring safe
                   deliveries.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-heartbeat text-primary fs-4"></i>
+                  <i className="fa fa-baby text-primary fs-4"></i>
                 </div>
                 <h4 className="mb-3">Postnatal Care</h4>
                 <p className="mb-4">
                   Comprehensive care for new mothers and infants after
                   childbirth.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-brain text-primary fs-4"></i>
+                  <i className="fa fa-hospital text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Adolescent Clinic</h4>
@@ -136,21 +133,20 @@ const WellWomenClinic = () => {
                   Expert care for teens' health needs, fostering healthy
                   transitions.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-hospital text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Fibroid Clinic </h4>
@@ -158,42 +154,40 @@ const WellWomenClinic = () => {
                   Specialized care for diagnosis and treatment of uterine
                   fibroids.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Menopause Clinic</h4>
                 <p className="mb-4">
                   Comprehensive care for women's menopausal health needs.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-vials text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Infertility Clinic</h4>
@@ -201,21 +195,20 @@ const WellWomenClinic = () => {
                   Advanced treatments and support for overcoming fertility
                   challenges
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-notes-medical text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Laparoscopy & Hysteroscopy</h4>
@@ -223,21 +216,20 @@ const WellWomenClinic = () => {
                   Minimally invasive procedures for precise diagnosis and
                   treatment.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Gynaec Surgeries</h4>
@@ -245,21 +237,20 @@ const WellWomenClinic = () => {
                   State-of-the-art surgical solutions enhancing women's health
                   and well-being.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-laptop-medical text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Sonography</h4>
@@ -267,21 +258,20 @@ const WellWomenClinic = () => {
                   Diagnostic imaging method using sound waves for precise
                   medical evaluation.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Well Woman Health Check</h4>
@@ -289,42 +279,40 @@ const WellWomenClinic = () => {
                   Comprehensive health assessment tailored for women's
                   well-being.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-venus-mars text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Pre-conceptional Counselling</h4>
                 <p className="mb-4">
                   Guidance for planning pregnancy and optimizing health
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-users text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Family Planning</h4>
@@ -332,21 +320,20 @@ const WellWomenClinic = () => {
                   Supporting informed decisions for family size and reproductive
                   health choices.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-user-md text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Cosmetic Gynaecology</h4>
@@ -354,30 +341,55 @@ const WellWomenClinic = () => {
                   Enhancing gynaecological aesthetics and function with
                   precision procedures.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
               </div>
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.5s"
             >
-              <div className="service-item bg-light rounded h-100 p-5">
+              <div className="service-item bg-custom rounded h-100 p-5">
                 <div
                   className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
                   style={{ width: '65px', height: '65px' }}
                 >
-                  <i className="fa fa-wheelchair text-primary fs-4"></i>
+                  <i className="fa fa-female text-primary fs-4"></i>
                 </div>
 
                 <h4 className="mb-3">Cervical Cancer Detection Centre</h4>
                 <p className="mb-4">
                   Center for precise detection and treatment of cervical cancer.
                 </p>
-                <a className="btn" href="">
-                  <i className="fa fa-plus text-primary me-3"></i>Read More
-                </a>
+
+                <i className="fa fa-minus text-primary me-3"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="card-columns">
+            <div className="card card-pin">
+              <img className="card-img" src={wwc1} alt="Card image" />
+              <div className="overlay">
+                <div className="more"></div>
+              </div>
+            </div>
+
+            <div className="card card-pin">
+              <img className="card-img" src={ww2} alt="Card image" />
+              <div className="overlay">
+                <div className="more"></div>
+              </div>
+            </div>
+
+            <div className="card card-pin">
+              <img className="card-img" src={ww3} alt="Card image" />
+              <div className="overlay">
+                <div className="more"></div>
               </div>
             </div>
           </div>

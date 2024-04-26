@@ -1,6 +1,7 @@
 import React from 'react';
-
 import './Footer.css'; // Import the CSS file for styling
+import { FaFacebook, FaWhatsapp, FaInstagram, FaGoogle } from 'react-icons/fa';
+import { GoMail } from 'react-icons/go';
 
 const Footer = () => {
   return (
@@ -21,27 +22,27 @@ const Footer = () => {
                 <ul className="social">
                   <li>
                     <a href="#">
-                      <i className="icofont-facebook"></i>
+                      <FaFacebook />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icofont-google-plus"></i>
+                      <GoMail />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icofont-twitter"></i>
+                      <FaWhatsapp />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icofont-vimeo"></i>
+                      <FaInstagram />
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i className="icofont-pinterest"></i>
+                      <FaGoogle />
                     </a>
                   </li>
                 </ul>
@@ -52,7 +53,7 @@ const Footer = () => {
               <div className="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div className="row">
-                  <div className="col-lg-6 col-md-6 col-12">
+                  <div className="col-lg-6 col-md-1 col-12">
                     <ul>
                       <li>
                         <a href="#">

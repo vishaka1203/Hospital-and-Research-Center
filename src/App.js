@@ -2,7 +2,6 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Intro from './Components/Introduction/Intro';
 import Navbar from './Components/Navbar/Navbar';
-import Carousel from './Components/Slider/Carousel';
 import Feature from './Components/Feature/Feature';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Specialities from './Pages/Specialities/Specialities';
@@ -17,6 +16,7 @@ import AcademicsResearch from './Pages/AcademicsResearch/AcademicsResearch';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
 import Testimonial from './Components/Testimonial/Testimonial';
+import Cards from './Components/Cards/Cards';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
             element={
               <>
                 <Intro />
-                <Carousel />
+                <Cards />
                 <Feature />
                 <Testimonial />
               </>

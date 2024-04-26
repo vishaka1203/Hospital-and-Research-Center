@@ -1,89 +1,86 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import banner2 from '../Assets/banner2.jpg';
-
+import React, { useEffect } from 'react';
 import './Testimonial.css';
+import Swiper from 'swiper';
 
 const Testimonial = () => {
+  useEffect(() => {
+    const swiper = new Swiper('.mySwiper', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        756: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }, []);
+
   return (
-    <section
-      style={{
-        backgroundImage: ` url(${banner2})`,
-        fontFamily: 'poppins',
-      }}
-    >
+    <section className="testimonial-group">
       <div className="container">
-        <div className="heading white-heading">Testimonial</div>
-        <div
-          id="testimonial4"
-          className="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
-          data-ride="carousel"
-          data-pause="hover"
-          data-interval="5000"
-          data-duration="2000"
-        >
-          <div className="carousel-inner" role="listbox">
-            <div className="carousel-item active">
-              <div className="testimonial4_slide">
-                <img
-                  src="https://i.ibb.co/8x9xK4H/team.jpg"
-                  className="img-circle img-responsive"
-                  alt=""
-                />
-                <p>Amazing man along with his hospital staff and services</p>
-                <h4>Austim Ellis</h4>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="testimonial4_slide">
-                <img
-                  src="https://i.ibb.co/8x9xK4H/team.jpg"
-                  className="img-circle img-responsive"
-                  alt=""
-                />
+        <h2 className="headerstyle">Testimonial</h2>
+        <div className="swiper mySwiper">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide">
+              <div className="slider-wrapper">
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.{' '}
+                  "Dr. Dukle's Hospital and Research Center sets the standard
+                  for excellence in healthcare."
                 </p>
-                <h4>Client 2</h4>
+                <h5>-Tonny Starc</h5>
               </div>
             </div>
-            <div className="carousel-item">
-              <div className="testimonial4_slide">
-                <img
-                  src="https://i.ibb.co/8x9xK4H/team.jpg"
-                  className="img-circle img-responsive"
-                  alt=""
-                />
+            <div className="swiper-slide">
+              <div className="slider-wrapper">
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.{' '}
+                  "Dr. Dukle's Hospital and Research Center sets the standard
+                  for excellence in healthcare."
                 </p>
-                <h4>Client 3</h4>
+                <h5>-Rubina</h5>
               </div>
             </div>
+            <div className="swiper-slide">
+              <div className="slider-wrapper">
+                <p>
+                  "Dr. Dukle's Hospital and Research Center sets the standard
+                  for excellence in healthcare."
+                </p>
+                <h5>-Ichigo</h5>
+              </div>
+            </div>
+            <div className="swiper-slide">
+              <div className="slider-wrapper">
+                <p>
+                  "Dr. Dukle's Hospital and Research Center sets the standard
+                  for excellence in healthcare."
+                </p>
+                <h5>-Peter Paris</h5>
+              </div>
+            </div>
+            {/* Add more swiper slides as needed */}
           </div>
-          <a
-            className="carousel-control-prev"
-            href="#testimonial4"
-            data-slide="prev"
-          >
-            <span className="carousel-control-prev-icon"></span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#testimonial4"
-            data-slide="next"
-          >
-            <span className="carousel-control-next-icon"></span>
-          </a>
+          <div className="swiper-pagination"></div>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
         </div>
       </div>
     </section>

@@ -23,6 +23,7 @@ const Pharmacy = () => {
                 textAlign: 'left',
               }}
             >
+              <br />
               At Dr. Dukle's Hospital and Research Center, we pride ourselves on
               being the premier destination for pharmaceutical services. With a
               commitment to excellence and patient care, our pharmacy is staffed

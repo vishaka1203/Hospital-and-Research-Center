@@ -1,0 +1,57 @@
+/* Cards.css */
+
+.specializecard {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Adjust the margin here */
+    margin-left: 10px; /* Adjust the margin here */
+    height: 120px;
+    width: 400px;
+    font-family: poppins;
+    background: linear-gradient(90deg, rgba(138, 228, 242, 1) 0%, rgba(0, 127, 194, 1) 100%);
+    animation: fadeIn 0.5s ease; /* Add the fadeIn animation */
+  }
+  
+  .c-name {
+    text-align: center;
+    color: #1a76d1;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .medical-icon {
+    font-size: 2rem;
+    color: #20a0d8;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

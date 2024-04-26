@@ -28,6 +28,7 @@ const PathoLab = () => {
                 textAlign: 'left',
               }}
             >
+              <br />
               Patho Lab Candolim was started in August 1991 as collaboration
               between Mrs. Lucia Vaz and Dr. Vasudev Dukle. For over 25 years it
               has continuously renewed its commitment to affordable and quality

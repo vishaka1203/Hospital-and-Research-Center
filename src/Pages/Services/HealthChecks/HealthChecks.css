@@ -5,6 +5,9 @@
 .container-xxl {
     font-family: poppins;
 }
+.bg-custom {
+  background: linear-gradient(90deg, rgba(138,228,242,1) 0%, rgba(0,127,194,1) 100%);
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -18,5 +21,5 @@
     height: 300px; /* Adjust this value to make the banner taller or shorter */
   }
   .heading1{
-    color:  #1A76D1;;
+    color:  #1A76D1;
   }

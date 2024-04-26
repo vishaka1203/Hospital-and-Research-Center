@@ -1,8 +1,20 @@
 import React from 'react';
 import './Feature.css';
 import dr from '../Assets/dr.jpg';
+import { FaWhatsapp } from 'react-icons/fa';
+import { PiPhoneCall } from 'react-icons/pi';
 
 const Feature = () => {
+  // Function to handle redirection to WhatsApp
+  const redirectToWhatsApp = () => {
+    window.location.href = 'https://wa.me/7721821770';
+  };
+
+  // Function to handle redirection for phone call
+  const callNow = () => {
+    window.location.href = 'tel:+7721821770'; // number
+  };
+
   return (
     <div className="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
       <div className="container feature px-lg-0">
@@ -23,7 +35,7 @@ const Feature = () => {
                 The hospital aims to build on the emergent possibilities of
                 clinical research, preventive medicine and medical tourism.
               </p>
-              <div className="row g-4">
+              <div style={{ marginBottom: '50px' }} className="row g-4">
                 <div className="col-6">
                   <div className="d-flex align-items-center">
                     <div
@@ -52,8 +64,29 @@ const Feature = () => {
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Add more feature items */}
+              <div className="row g-4">
+                <div className="col-6">
+                  {/* Button for booking appointment */}
+                  <button
+                    className="btn btn-light rounded-pill text-primary"
+                    onClick={redirectToWhatsApp}
+                  >
+                    For Inquiry&nbsp;
+                    <FaWhatsapp />
+                  </button>
+                </div>
+                <div className="col-6">
+                  {/* Button for calling */}
+                  <button
+                    className="btn btn-light rounded-pill text-primary"
+                    onClick={callNow}
+                  >
+                    Call Us&nbsp;
+                    <PiPhoneCall />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
