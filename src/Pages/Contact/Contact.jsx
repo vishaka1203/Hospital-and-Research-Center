@@ -1,22 +1,45 @@
+// Contact.jsx
+
 import React, { useState, useRef } from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
   const [done, setDone] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_i7wfzks', 'template_vyf85te', form.current, {
-        publicKey: 'i0NuPys6oya4Pko3j',
-      })
+      .sendForm(
+        'service_i7wfzks',
+        'template_vyf85te',
+        form.current,
+        'i0NuPys6oya4Pko3j'
+      )
       .then(
         () => {
           console.log('SUCCESS!');
           setDone(true);
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -27,22 +50,40 @@ const Contact = () => {
   return (
     <div className="contact-form">
       <form ref={form} onSubmit={sendEmail}>
-        <h1>Contact</h1>
-        <input
-          type="text"
-          name="user_name"
-          className="user"
-          placeholder="Name"
-        />
-        <input
-          type="email"
-          name="user_email"
-          className="user"
-          placeholder="Email"
-        />
-        <textarea name="message" className="user" placeholder="Message" />
-        <input type="submit" value="Send" className="button" />
-        <span>{done && 'Thanks for contacting me!'}</span>
+        <h2 className="heading">Contact Us</h2>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Send</button>
+        {done && (
+          <span className="success-message">Thanks for contacting us!</span>
+        )}
       </form>
     </div>
   );
