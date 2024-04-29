@@ -1,4 +1,5 @@
 import './App.css';
+
 import Footer from './Components/Footer/Footer';
 import Intro from './Components/Introduction/Intro';
 import Navbar from './Components/Navbar/Navbar';
@@ -17,6 +18,7 @@ import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Cards from './Components/Cards/Cards';
+import ChatBox from './Components/ChatBox/ChatBox';
 
 function App() {
   return (
@@ -74,6 +76,7 @@ function App() {
         </Routes>
       </Router>
       <Footer />
+      <ChatBox />
     </div>
   );
 }
