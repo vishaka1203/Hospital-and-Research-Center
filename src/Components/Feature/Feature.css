@@ -70,3 +70,20 @@
   color: #FFFFFF;
   background: var(--primary);
 }
+.custom-button {
+  background-color: #ffffff; /* Set background color */
+  color: #007bff; /* Set text color */
+  border: 2px solid #007bff; /* Set border color and thickness */
+  border-radius: 10px; /* Apply rounded corners */
+  padding: 15px 30px; /* Add padding */
+  font-size: 1.2rem; /* Adjust font size */
+  transition: all 0.3s ease; /* Add transition effect */
+  display: inline-flex; /* Align icon and text horizontally */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  position: relative; /* Enable z-index */
+  text-decoration: none; /* Remove default link underline */
+  overflow: hidden; /* Hide overflow */
+  font-weight: bold;
+}
+

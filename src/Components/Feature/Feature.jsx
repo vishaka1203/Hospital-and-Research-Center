@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Feature.css';
 import dr from '../Assets/dr.jpg';
 import { FaWhatsapp } from 'react-icons/fa';
 import { PiPhoneCall } from 'react-icons/pi';
+import { BsCalendar2CheckFill } from 'react-icons/bs';
+import AppointmentForm from '../../Forms/AppointmentBooking/AppointmentForm';
 
 const Feature = () => {
+  const [showAppointmentForm, setShowAppointmentForm] = useState(false);
+
+  const openAppointmentForm = () => {
+    setShowAppointmentForm(true);
+  };
+
+  const closeAppointmentForm = () => {
+    setShowAppointmentForm(false);
+  };
   // Function to handle redirection to WhatsApp
   const redirectToWhatsApp = () => {
     window.location.href = 'https://wa.me/7721821770';
@@ -68,7 +79,7 @@ const Feature = () => {
 
               <div className="row g-4">
                 <div className="col-6">
-                  {/* Button for booking appointment */}
+                  {/* Button which directs to the Whatsapp */}
                   <button
                     className="btn btn-light rounded-pill text-primary"
                     onClick={redirectToWhatsApp}
@@ -87,6 +98,32 @@ const Feature = () => {
                     <PiPhoneCall />
                   </button>
                 </div>
+
+                <div className="row g-4">
+                  <div className="col-8">
+                    <button
+                      className="a-btn btn-light text-primary custom-button"
+                      onClick={openAppointmentForm}
+                    >
+                      Appointment Booking
+                      <BsCalendar2CheckFill />
+                    </button>
+                  </div>
+                </div>
+                {/* Appointment form pop-up */}
+                {showAppointmentForm && (
+                  <div className="appointment-form-popup">
+                    <div className="appointment-form-container">
+                      <button
+                        className="close-btn"
+                        onClick={closeAppointmentForm}
+                      >
+                        &times;
+                      </button>
+                      <AppointmentForm />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
