@@ -120,7 +120,7 @@ const ChatBox = () => {
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
-          <button onClick={sendMessage}>Send</button>
+          <button onClick={sendMessage}>Send </button>
         </div>
       )}
     </div>

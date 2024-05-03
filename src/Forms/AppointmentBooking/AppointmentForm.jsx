@@ -3,7 +3,6 @@ import './AppointmentForm.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import logo from '../../Components/Assets/logo.png';
-
 const AppointmentForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState('');
@@ -14,15 +13,12 @@ const AppointmentForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [isAppointmentBooked, setIsAppointmentBooked] = useState(false);
 
-  // Email validation regex
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-  // Phone number validation regex (10 digits)
   const mobileRegex = /^[0-9]{10}$/;
 
-  // Function to handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     // Validate email and phone number
     if (!emailRegex.test(email)) {
       alert('Please enter a valid email address.');
@@ -32,11 +28,45 @@ const AppointmentForm = () => {
       alert('Please enter a valid 10-digit mobile number.');
       return;
     }
+
     setIsFormValid(true);
-    // Simulate booking appointment (replace with actual logic)
+
+    const formData = {
+      selectedDate: selectedDate ? selectedDate.toISOString() : null, // Ensure it's not null
+      selectedTime,
+      name,
+      email,
+      mobile,
+      problemDescription,
+    };
+
+    // Log form data for debugging
+    console.log('Form data:', formData);
+
+    // Simulate booking appointment with timeout
     setTimeout(() => {
       setIsAppointmentBooked(true);
-    }, 1000);
+    }, 1000); // Simulate delay before setting booked state
+
+    // Try to send data to the backend server
+    try {
+      const response = await fetch('http://localhost:8000/book-appointment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to book appointment');
+      }
+
+      console.log('Appointment booked successfully'); // Indicate success in console
+    } catch (error) {
+      alert('Error booking appointment. Please try again later.');
+      console.error(error);
+    }
   };
 
   return (
