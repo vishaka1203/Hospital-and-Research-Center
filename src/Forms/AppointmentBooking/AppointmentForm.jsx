@@ -3,27 +3,23 @@ import './AppointmentForm.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import logo from '../../Components/Assets/logo.png';
+import doctors  from '../../data/doctors-ddl.json'
+import appointnmentTimes from '../../data/appointnment-times-ddl.json'
 
 const AppointmentForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState('');
+  const [selectedTime, setSelectedTime] = useState();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [problemDescription, setProblemDescription] = useState('');
-  const [selectedDoctor, setSelectedDoctor] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   const [isAppointmentBooked, setIsAppointmentBooked] = useState(false);
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const mobileRegex = /^[0-9]{10}$/;
-  //changes made
-  const doctorEmails = {
-    1: 'Vishaka7721@gmail.com',
-    2: '19co36@aitdgoa.edu.in',
-    3: 'patilkalyani458@gmail.com',
-    4: 'patilkalyani910@gmail.com',
-  };
+
+  const [selectedDoctor, setSelectedDoctor] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,15 +45,6 @@ const AppointmentForm = () => {
       problemDescription,
     };
 
-    // Log form data for debugging
-    console.log('Form data:', formData);
-
-    // Simulate booking appointment with timeout
-    setTimeout(() => {
-      setIsAppointmentBooked(true);
-    }, 1000); // Simulate delay before setting booked state
-
-    // Try to send data to the backend server
     try {
       const response = await fetch('http://localhost:8000/book-appointment', {
         method: 'POST',
@@ -71,17 +58,18 @@ const AppointmentForm = () => {
         throw new Error('Failed to book appointment');
       }
       console.log('Appointment booked successfully');
-
+      
       // Send email to the selected doctor
-      const doctorEmail = doctorEmails[selectedDoctor];
-      if (doctorEmail) {
+      console.log(selectedDoctor)
+      if (selectedDoctor) {
+        console.log("TRIGGERED")
         const emailResponse = await fetch('http://localhost:8000/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            doctorEmail,
+            doctorEmail: selectedDoctor,
             formData,
           }),
         });
@@ -157,22 +145,32 @@ const AppointmentForm = () => {
               </div>
             )}
           </div>
+
           <div className="col-12 col-sm-6">
             <select
               className="form-select border-0"
               value={selectedDoctor}
+              defaultValue={'Select a doctor'}
               onChange={(e) => setSelectedDoctor(e.target.value)}
               required
             >
-              <option disabled selected>
-                Choose Doctor
-              </option>
-              <option value="1">Dr. Vasudev Dukle</option>
-              <option value="2">Dr. Vaibhav Dukle</option>
-              <option value="3">Dr. Amit Kalangutkar</option>
-              <option value="4">Dr. Vishal Dubhashi</option>
+              {
+                doctors.map(
+                  doctor =>  (
+                    <option 
+                      key={doctor.value} 
+                      data-color={doctor.displayText} 
+                      value={doctor.value}
+                    >
+                      {doctor.displayText}
+                    </option> 
+                  )
+                )
+              }
+
             </select>
           </div>
+
           <div className="col-12 col-sm-6">
             <DatePicker
               selected={selectedDate}
@@ -183,20 +181,30 @@ const AppointmentForm = () => {
               required
             />
           </div>
+
           <div className="col-12 col-sm-6">
             <select
               className="form-select border-0"
               value={selectedTime}
+              defaultValue={'Choose Time'}
               onChange={(e) => setSelectedTime(e.target.value)}
               required
             >
-              <option disabled selected>
-                Choose Time
-              </option>
-              <option value="09:00 AM">09:00 AM</option>
-              <option value="10:00 AM">10:00 AM</option>
-              <option value="11:00 AM">11:00 AM</option>
-              {/* Add more timing options as needed */}
+
+              {
+                appointnmentTimes.map(
+                  appointnmentTime =>  (
+                    <option 
+                      key={appointnmentTime.value} 
+                      data-color={appointnmentTime.displayText} 
+                      value={appointnmentTime.value}
+                    >
+                      {appointnmentTime.displayText}
+                    </option> 
+                  )
+                )
+              }
+
             </select>
           </div>
           <div className="col-12">

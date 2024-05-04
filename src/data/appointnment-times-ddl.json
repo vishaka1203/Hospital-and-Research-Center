@@ -1,0 +1,26 @@
+[
+    {
+        "displayText": "Choose Time",
+        "value": "Choose Time"
+    },
+    {
+        "displayText": "09:00 AM",
+        "value": "09:00 AM"
+    },
+    {
+        "displayText": "10:00 AM",
+        "value": "10:00 AM"
+    },
+    {
+        "displayText": "11:00 AM",
+        "value": "11:00 AM"
+    },
+    {
+        "displayText": "12:00 PM",
+        "value": "12:00 PM"
+    },
+    {
+        "displayText": "01:00 PM",
+        "value": "01:00 PM"
+    }
+]
