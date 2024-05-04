@@ -3,6 +3,7 @@ import './AppointmentForm.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import logo from '../../Components/Assets/logo.png';
+
 const AppointmentForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState('');
@@ -10,11 +11,19 @@ const AppointmentForm = () => {
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [problemDescription, setProblemDescription] = useState('');
+  const [selectedDoctor, setSelectedDoctor] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   const [isAppointmentBooked, setIsAppointmentBooked] = useState(false);
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const mobileRegex = /^[0-9]{10}$/;
+  //changes made
+  const doctorEmails = {
+    1: 'Vishaka7721@gmail.com',
+    2: '19co36@aitdgoa.edu.in',
+    3: 'patilkalyani458@gmail.com',
+    4: 'patilkalyani910@gmail.com',
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,8 +70,28 @@ const AppointmentForm = () => {
       if (!response.ok) {
         throw new Error('Failed to book appointment');
       }
+      console.log('Appointment booked successfully');
 
-      console.log('Appointment booked successfully'); // Indicate success in console
+      // Send email to the selected doctor
+      const doctorEmail = doctorEmails[selectedDoctor];
+      if (doctorEmail) {
+        const emailResponse = await fetch('http://localhost:8000/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            doctorEmail,
+            formData,
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          throw new Error('Failed to send email to doctor');
+        }
+
+        console.log('Email sent to doctor successfully');
+      }
     } catch (error) {
       alert('Error booking appointment. Please try again later.');
       console.error(error);
@@ -129,7 +158,12 @@ const AppointmentForm = () => {
             )}
           </div>
           <div className="col-12 col-sm-6">
-            <select className="form-select border-0">
+            <select
+              className="form-select border-0"
+              value={selectedDoctor}
+              onChange={(e) => setSelectedDoctor(e.target.value)}
+              required
+            >
               <option disabled selected>
                 Choose Doctor
               </option>
